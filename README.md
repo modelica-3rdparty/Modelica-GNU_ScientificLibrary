@@ -5,7 +5,7 @@ Free library for accessing the [GNU Scientific Library](https://www.gnu.org/soft
 
 ## Tested Environments
 
-- OpenModelica 1.25.0
+- OpenModelica 1.25.1
 - Dymola 2023x Refresh 1
 
 ## Overview
