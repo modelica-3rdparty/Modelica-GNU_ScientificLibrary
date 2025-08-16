@@ -18,13 +18,13 @@ model CopperSpecHeat "Copper Specific Heat"
 equation
   connect(fixedTemperature.port, convection.fluid) annotation(
     Line(points = {{40, -10}, {20, -10}}, color = {191, 0, 0}));
-  connect(copperLump.port, convection.solid) annotation(
-    Line(points = {{-30, -10}, {0, -10}}, color = {191, 0, 0}));
   connect(Gc_const.y, convection.Gc) annotation(
     Line(points = {{2, 30}, {10, 30}, {10, 0}}, color = {0, 0, 127}));
+  connect(copperLump.port, convection.solid) annotation(
+    Line(points = {{-30, -10}, {0, -10}}, color = {191, 0, 0}));
   annotation(
     __OpenModelica_simulationFlags(lv = "LOG_STATS", s = "dassl", variableFilter = ".*"),
     experiment(StartTime = 0, StopTime = 120, Tolerance = 1e-06, Interval = 0.001),
-    Documentation(info = "<html><head></head><body>Warming a lump of copper via convection. The heat-transfer modeling is rather simplistic...&nbsp;<br><div><br></div><div><img src=\"modelica://GNU_ScientificLibrary/Examples/specfunc/CopperSpecHeat_T_vs_t.png\"></div><div><br></div><div>But the main feature here -- namely, the temperature-dependent heat capacity -- is still thereby revealed. Note the c<sub>v</sub>~T<sup>3</sup>-behavior for low temperatures, accurately predicted in the Debye model (for high-T, this correctly turns over to an approach to a constant). Note also the relatively small contribution from the conduction electrons (well approximated by a gas of degenerate fermions):&nbsp;</div><div><br><img src=\"modelica://GNU_ScientificLibrary/Examples/specfunc/CopperSpecHeat_cv_vs_T.png\"></div><div><br></div><div>See also the Physics.DebyeEoS and Physics.FermiDiracEoS blocks.</div></body></html>"),
+    Documentation(info = "<html><head></head><body>Warming a lump of copper via convection. The heat-transfer modeling is rather simplistic...&nbsp;<br><div><br></div><div><img src=\"modelica://GNU_ScientificLibrary/Examples/specfunc/CopperSpecHeat_T_vs_t.png\"></div><div><br></div><div>But the main feature here -- namely, the temperature-dependent heat capacity -- is still thereby revealed (see below). Note the c<sub>v</sub>~T<sup>3</sup>-behavior for low temperatures, accurately predicted in the Debye model (for high-T, this correctly turns over to an approach to a constant). Note also the relatively small contribution from the conduction electrons (well approximated by a gas of degenerate fermions), which, despite not holding much heat, contribute significantly to its quick transport. (See also the Physics.DebyeEoS and Physics.FermiDiracEoS blocks.)</div><div><br><img src=\"modelica://GNU_ScientificLibrary/Examples/specfunc/CopperSpecHeat_cv_vs_T.png\"></div><div><br></div></body></html>"),
     Diagram(coordinateSystem(extent = {{-40, 40}, {60, -20}})));
 end CopperSpecHeat;
