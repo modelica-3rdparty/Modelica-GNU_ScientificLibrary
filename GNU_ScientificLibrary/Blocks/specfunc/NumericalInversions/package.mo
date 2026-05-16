@@ -1,6 +1,6 @@
 within GNU_ScientificLibrary.Blocks.specfunc;
 package NumericalInversions
-  extends Icons.VariantsPackage;
+  extends Icons.Package;
 
 
 

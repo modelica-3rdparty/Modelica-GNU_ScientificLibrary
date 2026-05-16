@@ -1,6 +1,6 @@
 within GNU_ScientificLibrary.Functions;
 package integration
-  extends Icons.VariantsPackage;
+  extends Icons.FunctionPackage;
 
 
 
