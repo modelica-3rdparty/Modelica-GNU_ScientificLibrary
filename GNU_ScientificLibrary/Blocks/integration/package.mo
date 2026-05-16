@@ -1,6 +1,6 @@
 within GNU_ScientificLibrary.Blocks;
 package integration
-  extends Icons.VariantsPackage;
+  extends Icons.Package;
 
 
 
